@@ -149,22 +149,34 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mym-vJ-4lp">
-                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="15"/>
-                                <state key="normal" title="Button">
-                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mym-vJ-4lp">
+                                <color key="backgroundColor" red="0.20392158630000001" green="0.59607845540000004" blue="0.85882359740000003" alpha="1" colorSpace="deviceRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="137" id="V7F-Tc-E03"/>
+                                    <constraint firstAttribute="height" constant="43" id="keb-ZD-PeT"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="tintColor" red="0.16078431904315948" green="0.49411767721176147" blue="0.71764707565307617" alpha="1" colorSpace="deviceRGB"/>
+                                <state key="normal">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Hello">
+                                            <attributes>
+                                                <color key="NSColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <font key="NSFont" size="18" name="Helvetica-Bold"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
                                 </state>
                                 <connections>
                                     <action selector="buttonClicked:" destination="2" eventType="touchUpInside" id="ODI-Li-0Oh"/>
                                 </connections>
                             </button>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="50" minValue="0.0" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="Bdn-Wt-Xpt">
-                                <color key="backgroundColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="272" id="Wdl-b4-4KJ"/>
                                 </constraints>
-                                <color key="minimumTrackTintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="minimumTrackTintColor" red="1" green="1" blue="1" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
                                 <color key="maximumTrackTintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="thumbTintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
@@ -176,7 +188,8 @@
                                     <action selector="switchButton:" destination="2" eventType="valueChanged" id="TYI-PN-013"/>
                                 </connections>
                             </switch>
-                            <stepper opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="Kbj-lf-f6V">
+                            <stepper opaque="NO" clipsSubviews="YES" alpha="0.60000000000000009" contentMode="scaleToFill" horizontalCompressionResistancePriority="726" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="Kbj-lf-f6V">
+                                <color key="backgroundColor" red="0.20392158630000001" green="0.59607845540000004" blue="0.85882359740000003" alpha="1" colorSpace="deviceRGB"/>
                                 <connections>
                                     <action selector="incrementalButton:" destination="2" eventType="valueChanged" id="JVc-u1-YdB"/>
                                 </connections>
@@ -196,7 +209,7 @@
                                     </barButtonItem>
                                 </items>
                             </toolbar>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="W6L-4t-h9J">
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bordered" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="W6L-4t-h9J">
                                 <segments>
                                     <segment title="First"/>
                                     <segment title="Second"/>
@@ -207,24 +220,24 @@
                                 </connections>
                             </segmentedControl>
                         </subviews>
-                        <color key="backgroundColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="deviceRGB"/>
                         <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="jeB-OF-TCx" firstAttribute="top" secondItem="3" secondAttribute="top" constant="75" id="0kd-Do-LaX"/>
-                            <constraint firstItem="mym-vJ-4lp" firstAttribute="top" secondItem="3" secondAttribute="top" constant="59" id="3Ns-Wy-M8a"/>
-                            <constraint firstItem="mym-vJ-4lp" firstAttribute="trailing" secondItem="Kbj-lf-f6V" secondAttribute="trailing" type="default" id="3d4-iE-YoV"/>
                             <constraint firstItem="W6L-4t-h9J" firstAttribute="centerX" secondItem="PpN-72-JcA" secondAttribute="centerX" type="default" id="6Jm-XJ-TSp"/>
                             <constraint firstItem="jeB-OF-TCx" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="AQs-ir-R0j"/>
                             <constraint firstItem="PpN-72-JcA" firstAttribute="trailing" secondItem="3" secondAttribute="trailing" type="default" id="ExE-BS-GUh"/>
-                            <constraint firstAttribute="trailing" secondItem="mym-vJ-4lp" secondAttribute="trailing" constant="24" id="LLz-F2-fed"/>
                             <constraint firstItem="W6L-4t-h9J" firstAttribute="top" secondItem="3" secondAttribute="top" constant="210" id="Ldo-1g-zZT"/>
+                            <constraint firstItem="Kbj-lf-f6V" firstAttribute="top" secondItem="ID1-XC-BOw" secondAttribute="top" type="default" id="TAa-Ur-0uW"/>
                             <constraint firstItem="PpN-72-JcA" firstAttribute="bottom" secondItem="3" secondAttribute="bottom" type="default" id="W0J-Mq-kT8"/>
                             <constraint firstItem="ID1-XC-BOw" firstAttribute="top" secondItem="3" secondAttribute="top" constant="159" id="XBo-U2-Kj5"/>
                             <constraint firstItem="ID1-XC-BOw" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="XLa-3J-30Y"/>
-                            <constraint firstItem="Kbj-lf-f6V" firstAttribute="top" secondItem="3" secondAttribute="top" constant="154" id="Xrw-sq-6X4"/>
+                            <constraint firstItem="mym-vJ-4lp" firstAttribute="trailing" secondItem="Kbj-lf-f6V" secondAttribute="trailing" type="default" id="bFB-CW-3nV"/>
                             <constraint firstItem="Bdn-Wt-Xpt" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="cM1-F9-FbC"/>
                             <constraint firstItem="PpN-72-JcA" firstAttribute="leading" secondItem="3" secondAttribute="leading" type="default" id="dkh-Ty-tAh"/>
+                            <constraint firstItem="mym-vJ-4lp" firstAttribute="top" secondItem="3" secondAttribute="top" constant="26" id="eM1-yB-CTE"/>
                             <constraint firstItem="Bdn-Wt-Xpt" firstAttribute="top" secondItem="3" secondAttribute="top" constant="118" id="mF9-76-Ih4"/>
+                            <constraint firstItem="mym-vJ-4lp" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="145" id="wJ3-KX-w1e"/>
                         </constraints>
                     </view>
                     <toolbarItems/>
